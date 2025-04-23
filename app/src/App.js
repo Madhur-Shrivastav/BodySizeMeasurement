@@ -14,6 +14,7 @@ function App() {
     neckline_size: "",
     low_hip_size: "",
     foot_length: "",
+    inside_leg_length: "",
     length: "",
   });
 
@@ -37,7 +38,7 @@ function App() {
         cat.split("_").map((sub) => ({ sub, full: cat }))
       );
       setCategories(options);
-    } else if (gender === "female") {
+    } else if (gender === "women") {
       const femaleCats = [
         "dresses_pajamas_robes_pencilskirts_pleatedskirts_miniskirts",
         "shortsleeve_longsleeve_tshirt_tanktops_bodysuits_lowcuttops_turtlenecks_halternecktops_puffsleeve_cutouttops_sweatshirts_hoodies_knitwear_sweaters_cardigans_jackets_coats_anoraks_gilets_dresses_bloueses_blaizers_nighties",
@@ -120,7 +121,7 @@ function App() {
         default:
           setCategoryFeatures({});
       }
-    } else if (gender === "female") {
+    } else if (gender === "women") {
       switch (fullCategory) {
         case "dresses_pajamas_robes_pencilskirts_pleatedskirts_miniskirts":
         case "jumpsuits":
@@ -207,7 +208,6 @@ function App() {
       <div className="form-container">
         <h1>Body Size Prediction</h1>
 
-        {/* GENDER Selection */}
         <div>
           <label>Gender:</label>
           <select
@@ -218,7 +218,7 @@ function App() {
           >
             <option value="">Select Gender</option>
             <option value="men">Men</option>
-            <option value="female">Female</option>
+            <option value="women">Female</option>
           </select>
         </div>
 
@@ -233,13 +233,13 @@ function App() {
               onChange={(e) => {
                 const sub = e.target.value;
                 const full = categories.find((c) => c.sub === sub)?.full || "";
-                handleCategoryChange(full, sub);
+                handleCategoryChange(full);
               }}
               required
             >
               <option value="">Select Category</option>
-              {categories.map((cat) => (
-                <option key={cat.sub} value={cat.sub}>
+              {categories.map((cat, index) => (
+                <option key={`${cat.sub}-${cat.full}-${index}`} value={cat.sub}>
                   {cat.sub
                     .replace(/_/g, " ")
                     .replace(/\b\w/g, (l) => l.toUpperCase())}

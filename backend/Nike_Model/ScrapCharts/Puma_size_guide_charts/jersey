@@ -1,0 +1,371 @@
+{
+    "table_0": [
+        [
+            "Men Regular Height: Fit for body height from 172cm to 185cm"
+        ],
+        [
+            "Men Tall Height: Fit for body height from 186cm to 195cm"
+        ]
+    ],
+    "table_1": [],
+    "table_2": [
+        [
+            "Size",
+            "Chest",
+            "Waist",
+            "Low hip",
+            "Regular InSeam",
+            "Tall InSeam"
+        ],
+        [
+            "XXS",
+            "73 - 80",
+            "60 - 67",
+            "72 - 79",
+            "82",
+            "88.5"
+        ],
+        [
+            "XS",
+            "81 - 88",
+            "68 - 75",
+            "80 - 87",
+            "82",
+            "88.5"
+        ],
+        [
+            "S",
+            "89 - 96",
+            "76 - 83",
+            "88 - 95",
+            "82",
+            "88.5"
+        ],
+        [
+            "M",
+            "97 - 104",
+            "84 - 91",
+            "96 - 103",
+            "82",
+            "88.5"
+        ],
+        [
+            "L",
+            "105 - 113",
+            "92 - 100",
+            "104 - 112",
+            "82",
+            "88.5"
+        ],
+        [
+            "XL",
+            "114 - 123",
+            "101 - 110",
+            "113 - 122",
+            "81",
+            "87.5"
+        ],
+        [
+            "XXL",
+            "124 - 133",
+            "111 - 121",
+            "123 - 132",
+            "80",
+            "86.5"
+        ]
+    ],
+    "table_3": [],
+    "table_4": [
+        [
+            "US",
+            "DE",
+            "UK",
+            "FR",
+            "ES",
+            "IT"
+        ],
+        [
+            "XXS",
+            "32",
+            "6",
+            "34",
+            "36",
+            "38"
+        ],
+        [
+            "XS",
+            "34",
+            "8",
+            "36",
+            "38",
+            "40"
+        ],
+        [
+            "S",
+            "36",
+            "10",
+            "38",
+            "40",
+            "42"
+        ],
+        [
+            "M",
+            "38",
+            "12",
+            "40",
+            "42",
+            "44"
+        ],
+        [
+            "L",
+            "40",
+            "14",
+            "42",
+            "44",
+            "46"
+        ],
+        [
+            "XL",
+            "42",
+            "16",
+            "44",
+            "46",
+            "48"
+        ],
+        [
+            "XXL",
+            "44",
+            "18",
+            "46",
+            "48",
+            "50"
+        ],
+        [
+            "3XL",
+            "46",
+            "20",
+            "48",
+            "50",
+            "52"
+        ]
+    ],
+    "table_5": [
+        [
+            "",
+            "1 – Chest",
+            "Measure around the fullest part of your chest, keeping the measuring tape horizontal"
+        ],
+        [
+            "2 – Waist",
+            "Measure around the narrowest part of your waist (between hips and belly button), keeping the measuring tape horizontal"
+        ],
+        [
+            "3 – Hips",
+            "Measure around the fullest part of your hips and bottom, keeping the measuring tape horizontal"
+        ],
+        [
+            "4 – Side seam",
+            "Measure vertically from your hip to your ankle"
+        ],
+        [
+            "5 - Thigh",
+            "Measure around the fullest part of your thigh, keeping the measuring tape horizontal"
+        ],
+        [
+            "6 - In seam",
+            "Measure vertically from crotch to the bottom of your heel"
+        ],
+        [
+            "7 - Sleeve length",
+            "Holding the tape at the centre of your back (just below the neck) measure across the shoulder and down the arm to the wrist, keeping your arm slightly bent"
+        ],
+        [
+            "8 - Shoulder width",
+            "Measure straight across the back from the top of one shoulder to the other"
+        ]
+    ],
+    "table_6": [
+        [
+            "Size",
+            "Back Length",
+            "CB Sleeve Length",
+            "Chest",
+            "Hem",
+            "Shoulder Width",
+            "Sleeve Length"
+        ],
+        [
+            "XXS",
+            "69.0",
+            "37.7",
+            "76",
+            "74",
+            "39.5",
+            "37.7"
+        ],
+        [
+            "XS",
+            "70.0",
+            "39.8",
+            "84",
+            "82",
+            "41.5",
+            "39.8"
+        ],
+        [
+            "S",
+            "71.0",
+            "41.9",
+            "92",
+            "90",
+            "43.5",
+            "41.9"
+        ],
+        [
+            "M",
+            "72.0",
+            "44.0",
+            "100",
+            "98",
+            "45.5",
+            "44.0"
+        ],
+        [
+            "L",
+            "74.0",
+            "46.1",
+            "108",
+            "106",
+            "47.5",
+            "46.1"
+        ],
+        [
+            "XL",
+            "76.0",
+            "48.9",
+            "118",
+            "116",
+            "49.5",
+            "48.9"
+        ],
+        [
+            "XXL",
+            "78.0",
+            "51.7",
+            "128",
+            "126",
+            "51.5",
+            "51.7"
+        ],
+        [
+            "3XL",
+            "80.4",
+            "54.2",
+            "138",
+            "136",
+            "53.5",
+            "54.2"
+        ],
+        [
+            "4XL",
+            "82.8",
+            "56.7",
+            "148",
+            "146",
+            "55.5",
+            "56.7"
+        ]
+    ],
+    "table_7": [
+        [
+            "Size",
+            "Back Length",
+            "CB Sleeve Length",
+            "Chest",
+            "Hem",
+            "Shoulder Width",
+            "Sleeve Length"
+        ],
+        [
+            "XXS",
+            "27.2",
+            "14.8",
+            "29.9",
+            "29.1",
+            "15.6",
+            "14.8"
+        ],
+        [
+            "XS",
+            "27.6",
+            "15.7",
+            "33.1",
+            "32.3",
+            "16.3",
+            "15.7"
+        ],
+        [
+            "S",
+            "28.0",
+            "16.5",
+            "36.2",
+            "35.4",
+            "17.1",
+            "16.5"
+        ],
+        [
+            "M",
+            "28.3",
+            "17.3",
+            "39.4",
+            "38.6",
+            "17.9",
+            "17.3"
+        ],
+        [
+            "L",
+            "29.1",
+            "18.1",
+            "42.5",
+            "41.7",
+            "18.7",
+            "18.1"
+        ],
+        [
+            "XL",
+            "29.9",
+            "19.3",
+            "46.5",
+            "45.7",
+            "19.5",
+            "19.3"
+        ],
+        [
+            "XXL",
+            "30.7",
+            "20.4",
+            "50.4",
+            "49.6",
+            "20.3",
+            "20.4"
+        ],
+        [
+            "3XL",
+            "31.7",
+            "21.3",
+            "54.3",
+            "53.5",
+            "21.1",
+            "21.3"
+        ],
+        [
+            "4XL",
+            "32.6",
+            "22.3",
+            "58.3",
+            "57.5",
+            "21.9",
+            "22.3"
+        ]
+    ]
+}

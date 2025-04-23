@@ -1,0 +1,163 @@
+{
+    "table_2": [
+        [
+            "Men Regular Height: Fit for body height from 172cm to 185cm"
+        ],
+        [
+            "Men Tall Height: Fit for body height from 186cm to 195cm"
+        ]
+    ],
+    "table_3": [],
+    "table_5": [],
+    "table_7": [
+        [
+            "",
+            "1 – Chest",
+            "Measure around the fullest part of your chest, keeping the measuring tape horizontal"
+        ],
+        [
+            "2 – Waist",
+            "Measure around the narrowest part of your waist (between hips and belly button), keeping the measuring tape horizontal"
+        ],
+        [
+            "3 – Hips",
+            "Measure around the fullest part of your hips and bottom, keeping the measuring tape horizontal"
+        ],
+        [
+            "4 – Side seam",
+            "Measure vertically from your hip to your ankle"
+        ],
+        [
+            "5 - Thigh",
+            "Measure around the fullest part of your thigh, keeping the measuring tape horizontal"
+        ],
+        [
+            "6 - In seam",
+            "Measure vertically from crotch to the bottom of your heel"
+        ],
+        [
+            "7 - Sleeve length",
+            "Holding the tape at the centre of your back (just below the neck) measure across the shoulder and down the arm to the wrist, keeping your arm slightly bent"
+        ],
+        [
+            "8 - Shoulder width",
+            "Measure straight across the back from the top of one shoulder to the other"
+        ]
+    ],
+    "table_8": [
+        [
+            "Size",
+            "Back Length",
+            "CB Sleeve Length",
+            "Chest",
+            "Hem",
+            "Shoulder Width"
+        ],
+        [
+            "XS",
+            "73.0",
+            "45.8",
+            "97",
+            "97",
+            "44.0"
+        ],
+        [
+            "S",
+            "74.0",
+            "47.9",
+            "105",
+            "105",
+            "48.0"
+        ],
+        [
+            "M",
+            "75.0",
+            "50.0",
+            "113",
+            "113",
+            "52.0"
+        ],
+        [
+            "L",
+            "77.0",
+            "52.1",
+            "121",
+            "121",
+            "56.0"
+        ],
+        [
+            "XL",
+            "79.0",
+            "54.9",
+            "131",
+            "131",
+            "61.0"
+        ],
+        [
+            "XXL",
+            "81.0",
+            "57.7",
+            "141",
+            "141",
+            "66.0"
+        ]
+    ],
+    "table_9": [
+        [
+            "Size",
+            "Back Length",
+            "CB Sleeve Length",
+            "Chest",
+            "Hem",
+            "Shoulder Width"
+        ],
+        [
+            "XS",
+            "28.7",
+            "18.0",
+            "38.2",
+            "38.2",
+            "17.3"
+        ],
+        [
+            "S",
+            "29.1",
+            "18.9",
+            "41.3",
+            "41.3",
+            "18.9"
+        ],
+        [
+            "M",
+            "29.5",
+            "19.7",
+            "44.5",
+            "44.5",
+            "20.5"
+        ],
+        [
+            "L",
+            "30.3",
+            "20.5",
+            "47.6",
+            "47.6",
+            "22.0"
+        ],
+        [
+            "XL",
+            "31.1",
+            "21.6",
+            "51.6",
+            "51.6",
+            "24.0"
+        ],
+        [
+            "XXL",
+            "31.9",
+            "22.7",
+            "55.5",
+            "55.5",
+            "26.0"
+        ]
+    ]
+}

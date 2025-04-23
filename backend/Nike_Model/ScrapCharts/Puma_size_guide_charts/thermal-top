@@ -1,0 +1,273 @@
+{
+  "table_0": [
+    [
+      "Size",
+      "CM",
+      "Inch"
+    ],
+    [
+      "S",
+      "70-75",
+      "28-30"
+    ],
+    [
+      "M",
+      "80-85",
+      "32-34"
+    ],
+    [
+      "L",
+      "90-95",
+      "36-38"
+    ],
+    [
+      "XL",
+      "100-105",
+      "40-42"
+    ],
+    [
+      "XXL",
+      "110-115",
+      "44-46"
+    ]
+  ],
+  "table_1": [
+    [
+      "Size",
+      "CM",
+      "Inch"
+    ],
+    [
+      "S",
+      "80-85",
+      "32-34"
+    ],
+    [
+      "M",
+      "90-95",
+      "36-38"
+    ],
+    [
+      "L",
+      "100-105",
+      "40-42"
+    ],
+    [
+      "XL",
+      "100-105",
+      "40-42"
+    ],
+    [
+      "XXL",
+      "120-125",
+      "48-50"
+    ]
+  ],
+  "table_2": [
+    [
+      "",
+      "1 – Chest",
+      "Measure around the fullest part of your chest, keeping the measuring tape horizontal"
+    ],
+    [
+      "2 – Waist",
+      "Measure around the narrowest part of your waist (between hips and belly button), keeping the measuring tape horizontal"
+    ],
+    [
+      "3 – Hips",
+      "Measure around the fullest part of your hips and bottom, keeping the measuring tape horizontal"
+    ],
+    [
+      "4 – Side seam",
+      "Measure vertically from your hip to your ankle"
+    ],
+    [
+      "5 - Thigh",
+      "Measure around the fullest part of your thigh, keeping the measuring tape horizontal"
+    ],
+    [
+      "6 - In seam",
+      "Measure vertically from crotch to the bottom of your heel"
+    ],
+    [
+      "7 - Sleeve length",
+      "Holding the tape at the centre of your back (just below the neck) measure across the shoulder and down the arm to the wrist, keeping your arm slightly bent"
+    ],
+    [
+      "8 - Shoulder width",
+      "Measure straight across the back from the top of one shoulder to the other"
+    ]
+  ],
+  "table_3": [
+    [
+      "Size",
+      "CB Sleeve Length",
+      "Chest",
+      "Hem",
+      "Shoulder Width"
+    ],
+    [
+      "XXS",
+      "71.7",
+      "70",
+      "71",
+      "32.0"
+    ],
+    [
+      "XS",
+      "73.8",
+      "78",
+      "79",
+      "34.0"
+    ],
+    [
+      "S",
+      "75.9",
+      "86",
+      "87",
+      "36.0"
+    ],
+    [
+      "M",
+      "78.0",
+      "94",
+      "95",
+      "38.0"
+    ],
+    [
+      "L",
+      "80.1",
+      "102",
+      "103",
+      "40.0"
+    ],
+    [
+      "XL",
+      "82.9",
+      "112",
+      "113",
+      "42.0"
+    ],
+    [
+      "XXL",
+      "85.7",
+      "122",
+      "123",
+      "44.0"
+    ],
+    [
+      "3XL",
+      "88.2",
+      "132",
+      "133",
+      "46.0"
+    ],
+    [
+      "4XL",
+      "90.7",
+      "142",
+      "143",
+      "48.0"
+    ],
+    [
+      "5XL",
+      "93.2",
+      "152",
+      "153",
+      "50.0"
+    ],
+    [
+      "6XL",
+      "95.7",
+      "162",
+      "163",
+      "52.0"
+    ]
+  ],
+  "table_4": [
+    [
+      "Size",
+      "CB Sleeve Length",
+      "Chest",
+      "Hem",
+      "Shoulder Width"
+    ],
+    [
+      "XXS",
+      "28.2",
+      "27.6",
+      "28.0",
+      "12.6"
+    ],
+    [
+      "XS",
+      "29.1",
+      "30.7",
+      "31.1",
+      "13.4"
+    ],
+    [
+      "S",
+      "29.9",
+      "33.9",
+      "34.3",
+      "14.2"
+    ],
+    [
+      "M",
+      "30.7",
+      "37.0",
+      "37.4",
+      "15.0"
+    ],
+    [
+      "L",
+      "31.5",
+      "40.2",
+      "40.6",
+      "15.7"
+    ],
+    [
+      "XL",
+      "32.6",
+      "44.1",
+      "44.5",
+      "16.5"
+    ],
+    [
+      "XXL",
+      "33.7",
+      "48.0",
+      "48.4",
+      "17.3"
+    ],
+    [
+      "3XL",
+      "34.7",
+      "52.0",
+      "52.4",
+      "18.1"
+    ],
+    [
+      "4XL",
+      "35.7",
+      "55.9",
+      "56.3",
+      "18.9"
+    ],
+    [
+      "5XL",
+      "36.7",
+      "59.8",
+      "60.2",
+      "19.7"
+    ],
+    [
+      "6XL",
+      "37.7",
+      "63.8",
+      "64.2",
+      "20.5"
+    ]
+  ]
+}

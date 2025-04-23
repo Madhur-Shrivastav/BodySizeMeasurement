@@ -9,6 +9,12 @@ def dump_model(model):
     category_name = "7ea8dcef"     
     os.makedirs("../../Models/women", exist_ok=True)
     joblib.dump(model, f"../../Models/women/{category_name}.pkl")
+    os.makedirs("../../Encoders/women", exist_ok=True)
+    joblib.dump(style_encoder, f"../../Encoders/women/{category_name}_style_encoder.pkl")
+    joblib.dump(category_encoder, f"../../Encoders/women/{category_name}_category_encoder.pkl")
+    joblib.dump(size_encoder, f"../../Encoders/women/{category_name}_size_encoder.pkl")
+    os.makedirs("../../Scalers/women", exist_ok=True)
+    joblib.dump(scaler, f"../../Scalers/women/{category_name}_scaler.pkl")
     print(f"Trained and saved model for '{category_name}'.")
 
 

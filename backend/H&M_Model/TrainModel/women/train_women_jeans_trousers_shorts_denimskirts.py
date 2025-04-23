@@ -7,7 +7,7 @@ import os
 import joblib
 
 def dump_model(model):
-    category_name = "jumpsuits"     
+    category_name = "jeans_trousers_shorts_denimskirts"     
     os.makedirs("../../Models/women", exist_ok=True)
     joblib.dump(model, f"../../Models/women/{category_name}.pkl")
     os.makedirs("../../Encoders/women", exist_ok=True)
@@ -17,8 +17,9 @@ def dump_model(model):
     os.makedirs("../../Scalers/women", exist_ok=True)
     joblib.dump(scaler, f"../../Scalers/women/{category_name}_scaler.pkl")
     print(f"Trained and saved model for '{category_name}'.")
+
     
-df = pd.read_csv("../../Datasets/women/jumpsuits_data.csv")
+df = pd.read_csv("../../Datasets/women/jeans_trousers_shorts_denimskirts_data.csv")
 
 style_encoder = LabelEncoder()
 category_encoder = LabelEncoder()
@@ -28,7 +29,7 @@ df['style'] = style_encoder.fit_transform(df['style'])
 df['category'] = category_encoder.fit_transform(df['category'])
 df['size'] = size_encoder.fit_transform(df['size'])
 
-X = df[['style', 'category', 'chest_cm', 'low_hip_cm', 'inside_leg_length_cm']]
+X = df[['style', 'category', 'low_hip_cm', 'inside_leg_length_cm']]
 y = df['size']
 
 scaler = StandardScaler()
@@ -77,7 +78,6 @@ def predict_size():
         if not matched_category:
             raise ValueError(f"Invalid category. Please enter a valid full category or component.")
 
-        chest_cm = float(input("Chest size (in cm): "))
         low_hip_cm = float(input("Low Hip size (in cm): "))
         inside_leg_length_cm: float = float(input("Inside Leg Length (in cm): "))
 
@@ -85,8 +85,8 @@ def predict_size():
         category_encoded = category_encoder.transform([matched_category])[0]
 
         input_data = pd.DataFrame(
-            [[style_encoded, category_encoded, chest_cm, low_hip_cm, inside_leg_length_cm]],
-            columns=['style', 'category', 'chest_cm', 'low_hip_cm', 'inside_leg_length_cm']
+            [[style_encoded, category_encoded, low_hip_cm, inside_leg_length_cm]],
+            columns=['style', 'category', 'low_hip_cm', 'inside_leg_length_cm']
         )
 
         input_scaled = scaler.transform(input_data)

@@ -3,7 +3,9 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
+  const [gender, setGender] = useState("");
   const [formData, setFormData] = useState({
+    gender: "",
     category: "",
     style: "",
     chest_size: "",
@@ -22,20 +24,43 @@ function App() {
   const [categoryFeatures, setCategoryFeatures] = useState({});
 
   useEffect(() => {
-    setCategories([
-      "jeans_trousers",
-      "shoes",
-      "jackets_coats",
-      "shirts",
-      "tops_tshirts",
-      "sweatshirts_hoodies",
-    ]);
-  }, []);
+    if (gender === "men") {
+      const menCats = [
+        "jeans_trousers",
+        "shoes",
+        "jackets_coats",
+        "shirts",
+        "tops_tshirts",
+        "sweatshirts_hoodies",
+      ];
+      const options = menCats.flatMap((cat) =>
+        cat.split("_").map((sub) => ({ sub, full: cat }))
+      );
+      setCategories(options);
+    } else if (gender === "female") {
+      const femaleCats = [
+        "dresses_pajamas_robes_pencilskirts_pleatedskirts_miniskirts",
+        "shortsleeve_longsleeve_tshirt_tanktops_bodysuits_lowcuttops_turtlenecks_halternecktops_puffsleeve_cutouttops_sweatshirts_hoodies_knitwear_sweaters_cardigans_jackets_coats_anoraks_gilets_dresses_bloueses_blaizers_nighties",
+        "corsets_bustiers_bandeau",
+        "jumpsuits",
+        "tops",
+        "jeans_trousers_shorts_denimskirts",
+      ];
+      const options = femaleCats.flatMap((cat) =>
+        cat.split("_").map((sub) => ({ sub, full: cat }))
+      );
+      setCategories(options);
+    } else {
+      setCategories([]);
+    }
+  }, [gender]);
 
-  const handleCategoryChange = (e) => {
-    const selectedCategory = e.target.value;
+  const handleGenderChange = (e) => {
+    const selectedGender = e.target.value;
+    setGender(selectedGender);
     setFormData({
-      category: selectedCategory,
+      gender: selectedGender,
+      category: "",
       style: "",
       chest_size: "",
       waist_size: "",
@@ -45,74 +70,97 @@ function App() {
       foot_length: "",
       length: "",
     });
-
-    switch (selectedCategory) {
-      case "jeans_trousers":
-        setCategoryFeatures({
-          style: false,
-          waist_size: true,
-          low_hip_size: true,
-          length: true,
-        });
-        break;
-      case "shoes":
-        setCategoryFeatures({
-          style: false,
-          foot_length: true,
-          length: false, // No length field for shoes
-        });
-        break;
-      case "jackets_coats":
-        setCategoryFeatures({
-          style: true,
-          chest_size: true,
-          waist_size: true,
-          arm_length: true,
-          neckline_size: true,
-          length: false, // No length field for jackets_coats
-        });
-        break;
-      case "shirts":
-        setCategoryFeatures({
-          style: true,
-          chest_size: true,
-          waist_size: true,
-          arm_length: true,
-          neckline_size: true,
-          length: false, // No length field for shirts
-        });
-        break;
-      case "tops_tshirts":
-        setCategoryFeatures({
-          style: true,
-          chest_size: true,
-          waist_size: true,
-          arm_length: true,
-          neckline_size: true,
-          length: false,
-        });
-        break;
-      case "sweatshirts_hoodies":
-        setCategoryFeatures({
-          style: true,
-          chest_size: true,
-          waist_size: true,
-          arm_length: true,
-          neckline_size: true,
-          length: false,
-        });
-        break;
-      default:
-        setCategoryFeatures({});
-        break;
-    }
+    setCategoryFeatures({});
+    setPredictedSize(null);
   };
 
-  const handleLengthChange = (e) => {
-    setFormData({
-      ...formData,
-      length: e.target.value,
-    });
+  const handleCategoryChange = (fullCategory) => {
+    setFormData((prevData) => ({
+      gender: prevData.gender,
+      category: fullCategory,
+      style: "",
+      chest_size: "",
+      waist_size: "",
+      arm_length: "",
+      neckline_size: "",
+      low_hip_size: "",
+      foot_length: "",
+      inside_leg_length: "",
+      length: "",
+    }));
+
+    if (gender === "men") {
+      switch (fullCategory) {
+        case "jeans_trousers":
+          setCategoryFeatures({
+            style: false,
+            waist_size: true,
+            low_hip_size: true,
+            inside_leg_length: true,
+          });
+          break;
+        case "shoes":
+          setCategoryFeatures({
+            style: false,
+            foot_length: true,
+          });
+          break;
+        case "jackets_coats":
+        case "shirts":
+        case "tops_tshirts":
+        case "sweatshirts_hoodies":
+          setCategoryFeatures({
+            style: true,
+            chest_size: true,
+            waist_size: true,
+            arm_length: true,
+            neckline_size: true,
+          });
+          break;
+        default:
+          setCategoryFeatures({});
+      }
+    } else if (gender === "female") {
+      switch (fullCategory) {
+        case "dresses_pajamas_robes_pencilskirts_pleatedskirts_miniskirts":
+        case "jumpsuits":
+          setCategoryFeatures({
+            style: true,
+            chest_size: true,
+            low_hip_size: true,
+            inside_leg_length: true,
+          });
+          break;
+
+        case "shortsleeve_longsleeve_tshirt_tanktops_bodysuits_lowcuttops_turtlenecks_halternecktops_puffsleeve_cutouttops_sweatshirts_hoodies_knitwear_sweaters_cardigans_jackets_coats_anoraks_gilets_dresses_bloueses_blaizers_nighties":
+        case "corsets_bustiers_bandeau":
+          setCategoryFeatures({
+            style: true,
+            chest_size: true,
+            low_hip_size: true,
+          });
+          break;
+
+        case "tops":
+          setCategoryFeatures({
+            style: true,
+            chest_size: true,
+            waist_size: true,
+            low_hip_size: true,
+          });
+          break;
+        case "jeans_trousers_shorts_denimskirts":
+          setCategoryFeatures({
+            style: true,
+            inside_leg_length: true,
+            low_hip_size: true,
+          });
+          break;
+
+        default:
+          setCategoryFeatures({});
+      }
+    }
   };
 
   const handleChange = (e) => {
@@ -158,19 +206,43 @@ function App() {
     <div className="App">
       <div className="form-container">
         <h1>Body Size Prediction</h1>
+
+        {/* GENDER Selection */}
+        <div>
+          <label>Gender:</label>
+          <select
+            name="gender"
+            value={gender}
+            onChange={handleGenderChange}
+            required
+          >
+            <option value="">Select Gender</option>
+            <option value="men">Men</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
         <form onSubmit={handleSubmit}>
           <div>
             <label>Category:</label>
             <select
               name="category"
-              value={formData.category}
-              onChange={handleCategoryChange}
+              value={
+                categories.find((c) => c.full === formData.category)?.sub || ""
+              }
+              onChange={(e) => {
+                const sub = e.target.value;
+                const full = categories.find((c) => c.sub === sub)?.full || "";
+                handleCategoryChange(full, sub);
+              }}
               required
             >
               <option value="">Select Category</option>
-              {categories.map((category) => (
-                <option key={category} value={category}>
-                  {category}
+              {categories.map((cat) => (
+                <option key={cat.sub} value={cat.sub}>
+                  {cat.sub
+                    .replace(/_/g, " ")
+                    .replace(/\b\w/g, (l) => l.toUpperCase())}
                 </option>
               ))}
             </select>
@@ -183,9 +255,7 @@ function App() {
                 type="text"
                 name="style"
                 value={formData.style}
-                onChange={(e) =>
-                  setFormData({ ...formData, style: e.target.value })
-                }
+                onChange={handleChange}
                 required
               />
             </div>
@@ -198,9 +268,7 @@ function App() {
                 type="number"
                 name="waist_size"
                 value={formData.waist_size}
-                onChange={(e) =>
-                  setFormData({ ...formData, waist_size: e.target.value })
-                }
+                onChange={handleChange}
                 required
               />
             </div>
@@ -213,9 +281,7 @@ function App() {
                 type="number"
                 name="low_hip_size"
                 value={formData.low_hip_size}
-                onChange={(e) =>
-                  setFormData({ ...formData, low_hip_size: e.target.value })
-                }
+                onChange={handleChange}
                 required
               />
             </div>
@@ -228,9 +294,7 @@ function App() {
                 type="number"
                 name="foot_length"
                 value={formData.foot_length}
-                onChange={(e) =>
-                  setFormData({ ...formData, foot_length: e.target.value })
-                }
+                onChange={handleChange}
                 required
               />
             </div>
@@ -243,9 +307,7 @@ function App() {
                 type="number"
                 name="chest_size"
                 value={formData.chest_size}
-                onChange={(e) =>
-                  setFormData({ ...formData, chest_size: e.target.value })
-                }
+                onChange={handleChange}
                 required
               />
             </div>
@@ -258,9 +320,7 @@ function App() {
                 type="number"
                 name="arm_length"
                 value={formData.arm_length}
-                onChange={(e) =>
-                  setFormData({ ...formData, arm_length: e.target.value })
-                }
+                onChange={handleChange}
                 required
               />
             </div>
@@ -273,10 +333,23 @@ function App() {
                 type="number"
                 name="neckline_size"
                 value={formData.neckline_size}
-                onChange={(e) =>
-                  setFormData({ ...formData, neckline_size: e.target.value })
-                }
+                onChange={handleChange}
                 required
+              />
+            </div>
+          )}
+          {categoryFeatures.inside_leg_length && (
+            <div>
+              <label>Inside Leg Length (cm):</label>
+              <input
+                type="number"
+                value={formData.inside_leg_length}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    inside_leg_length: e.target.value,
+                  })
+                }
               />
             </div>
           )}
@@ -287,9 +360,7 @@ function App() {
               <select
                 name="length"
                 value={formData.length}
-                onChange={(e) =>
-                  setFormData({ ...formData, length: e.target.value })
-                }
+                onChange={handleChange}
                 required
               >
                 <option value="">Select Length</option>

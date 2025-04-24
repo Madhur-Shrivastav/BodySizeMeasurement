@@ -83,8 +83,26 @@ def predict_body_size(input_data: BodySizeInput):
     gender = input_data.gender.lower()
     if gender not in ['men', 'women']:
         raise HTTPException(status_code=400, detail="Gender must be either 'men' or 'women'.")
+    print(input_data.category)
+    print("models:", assets["women"]['models']['34196a8e'])
+    print("encoders:", assets["women"]['encoders']['34196a8e'])
+    print("scaler:", assets["women"]['scalers']['34196a8e'])
 
     try:
+        # if(input_data["category"]=="shortsleeve_longsleeve_tshirt_tanktops_bodysuits_lowcuttops_turtlenecks_halternecktops_puffsleeve_cutouttops_sweatshirts_hoodies_knitwear_sweaters_cardigans_jackets_coats_anoraks_gilets_dresses_bloueses_blaizers_nighties"):
+        #     model = assets[gender]['models']['34196a8e']
+        #     style_encoder = assets[gender]['encoders']['34196a8e'].get('style', None)
+        #     category_encoder = assets[gender]['encoders']['34196a8e']['category']
+        #     size_encoder = assets[gender]['encoders']['34196a8e']['size']
+        #     scaler = assets[gender]['scalers']['34196a8e']
+        
+        # else:
+        #     model = assets[gender]['models'][input_data.category]
+        #     style_encoder = assets[gender]['encoders'][input_data.category].get('style', None)
+        #     category_encoder = assets[gender]['encoders'][input_data.category]['category']
+        #     size_encoder = assets[gender]['encoders'][input_data.category]['size']
+        #     scaler = assets[gender]['scalers'][input_data.category]
+        
         model = assets[gender]['models'][input_data.category]
         style_encoder = assets[gender]['encoders'][input_data.category].get('style', None)
         category_encoder = assets[gender]['encoders'][input_data.category]['category']
@@ -97,10 +115,14 @@ def predict_body_size(input_data: BodySizeInput):
             style_encoded = style_encoder.transform([input_data.style.lower()])[0]
         else:
             style_encoded = None
-
-        if input_data.category.lower() not in category_encoder.classes_:
-            raise HTTPException(status_code=400, detail="Invalid category input. Please check available categories.")
-        category_encoded = category_encoder.transform([input_data.category.lower()])[0]
+            
+        if input_data.category == "34196a8e":
+            category_encoded = category_encoder.transform([("shortsleeve_longsleeve_tshirt_tanktops_bodysuits_lowcuttops_turtlenecks_halternecktops_puffsleeve_cutouttops_sweatshirts_hoodies_knitwear_sweaters_cardigans_jackets_coats_anoraks_gilets_dresses_bloueses_blaizers_nighties").lower()])[0]
+        else:
+            if input_data.category.lower() not in category_encoder.classes_:
+                raise HTTPException(status_code=400, detail="Invalid category input. Please check available categories.")
+            else:
+                 category_encoded = category_encoder.transform([input_data.category.lower()])[0]
 
         input_array = []
 

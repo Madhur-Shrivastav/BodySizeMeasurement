@@ -183,6 +183,12 @@ function App() {
       )
     );
 
+    if (
+      cleanedData.category ===
+      "shortsleeve_longsleeve_tshirt_tanktops_bodysuits_lowcuttops_turtlenecks_halternecktops_puffsleeve_cutouttops_sweatshirts_hoodies_knitwear_sweaters_cardigans_jackets_coats_anoraks_gilets_dresses_bloueses_blaizers_nighties"
+    ) {
+      cleanedData.category = "34196a8e";
+    }
     console.log(cleanedData);
 
     try {

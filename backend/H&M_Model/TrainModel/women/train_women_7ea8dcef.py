@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score
 import os
 import joblib
 def dump_model(model):
-    category_name = "7ea8dcef"     
+    category_name = "dresses_pajamas_robes_pencilskirts_pleatedskirts_miniskirts"     
     os.makedirs("../../Models/women", exist_ok=True)
     joblib.dump(model, f"../../Models/women/{category_name}.pkl")
     os.makedirs("../../Encoders/women", exist_ok=True)
